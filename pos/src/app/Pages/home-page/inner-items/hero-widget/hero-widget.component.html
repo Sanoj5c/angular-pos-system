@@ -1,1 +1,81 @@
-<p>hero-widget works!</p>
+<section class="hero">
+  <div class="hero__bg-grid"></div>
+  <div class="hero__orb hero__orb--1"></div>
+  <div class="hero__orb hero__orb--2"></div>
+
+  <div class="hero__container">
+    <div class="hero__badge">
+      <span class="hero__badge-dot"></span>
+      Live POS · Trusted by 1,200+ businesses
+    </div>
+
+    <h1 class="hero__title">
+      Run Your Business<br />
+      <span class="hero__title-accent">Smarter & Faster</span>
+    </h1>
+
+    <p class="hero__subtitle">
+      SwiftPOS is the all-in-one point-of-sale platform built for modern
+      retailers, restaurants, and service businesses. Real-time analytics,
+      seamless payments — all in one place.
+    </p>
+
+    <div class="hero__actions">
+      <button class="hero__btn hero__btn--primary" (click)="onGetStarted()">
+        <span>Get Started Free</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="hero__btn hero__btn--ghost" (click)="onWatchDemo()">
+        <div class="hero__play-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        Watch Demo
+      </button>
+    </div>
+
+    <div class="hero__stats">
+      <div class="hero__stat" *ngFor="let stat of stats">
+        <span class="hero__stat-value">{{ stat.value }}</span>
+        <span class="hero__stat-label">{{ stat.label }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__visual">
+    <div class="hero__card hero__card--main">
+      <div class="hero__card-header">
+        <div class="hero__card-dot" style="background:var(--danger-color)"></div>
+        <div class="hero__card-dot" style="background:var(--green-color)"></div>
+        <div class="hero__card-dot" style="background:var(--blue-color)"></div>
+        <span class="hero__card-title">Today's Sales</span>
+      </div>
+      <div class="hero__card-body">
+        <div class="hero__metric">
+          <span class="hero__metric-label">Revenue</span>
+          <span class="hero__metric-value hero__metric-value--green">$12,480</span>
+        </div>
+        <div class="hero__metric">
+          <span class="hero__metric-label">Orders</span>
+          <span class="hero__metric-value">348</span>
+        </div>
+        <div class="hero__metric">
+          <span class="hero__metric-label">Avg. Ticket</span>
+          <span class="hero__metric-value">$35.86</span>
+        </div>
+        <div class="hero__bar-chart">
+          <div class="hero__bar" *ngFor="let b of bars" [style.height.%]="b"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__card hero__card--float hero__card--float-top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-color)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span>Payment approved</span>
+    </div>
+
+    <div class="hero__card hero__card--float hero__card--float-bottom">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-color)" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      <span>Sales up 18% this week</span>
+    </div>
+  </div>
+</section>

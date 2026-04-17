@@ -1,1 +1,80 @@
-<p>pricing works!</p>
+<section class="pricing">
+  <div class="pricing__container">
+
+    <div class="pricing__header">
+      <div class="pricing__label">Simple Pricing</div>
+      <h2 class="pricing__title">One plan for every<br /><span class="pricing__title-accent">stage of growth.</span></h2>
+      <p class="pricing__subtitle">Start free. Scale as you grow. Cancel anytime.</p>
+
+      <!-- Toggle -->
+      <div class="pricing__toggle">
+        <span [class.pricing__toggle-label--active]="!isAnnual">Monthly</span>
+        <button class="pricing__toggle-btn" (click)="toggleBilling()">
+          <div class="pricing__toggle-knob" [class.pricing__toggle-knob--on]="isAnnual"></div>
+        </button>
+        <span [class.pricing__toggle-label--active]="isAnnual">
+          Annual <span class="pricing__toggle-save">Save 20%</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="pricing__cards">
+      <div
+        class="pricing__card"
+        *ngFor="let plan of plans"
+        [class.pricing__card--featured]="plan.featured"
+      >
+        <div class="pricing__card-top">
+          <div class="pricing__plan-badge" *ngIf="plan.badge">{{ plan.badge }}</div>
+          <div class="pricing__plan-icon" [style.background]="plan.iconBg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" [attr.stroke]="plan.iconColor" stroke-width="2" [innerHTML]="plan.icon"></svg>
+          </div>
+          <h3 class="pricing__plan-name">{{ plan.name }}</h3>
+          <p class="pricing__plan-desc">{{ plan.desc }}</p>
+        </div>
+
+        <div class="pricing__price-block">
+          <span class="pricing__currency">$</span>
+          <span class="pricing__amount">{{ isAnnual ? plan.annualPrice : plan.monthlyPrice }}</span>
+          <span class="pricing__period">/ mo</span>
+        </div>
+        <p class="pricing__billed-note" *ngIf="isAnnual && plan.monthlyPrice > 0">
+          Billed ${{ plan.annualPrice * 12 }}/year
+        </p>
+
+        <ul class="pricing__features">
+          <li class="pricing__feature" *ngFor="let f of plan.features" [class.pricing__feature--disabled]="!f.included">
+            <div class="pricing__feature-icon" [class.pricing__feature-icon--check]="f.included">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <ng-container *ngIf="f.included">
+                  <polyline points="20 6 9 17 4 12"/>
+                </ng-container>
+                <ng-container *ngIf="!f.included">
+                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </ng-container>
+              </svg>
+            </div>
+            {{ f.text }}
+          </li>
+        </ul>
+
+        <button
+          class="pricing__cta"
+          [class.pricing__cta--featured]="plan.featured"
+          (click)="onSelectPlan(plan)"
+        >
+          {{ plan.cta }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Trust strip -->
+    <div class="pricing__trust">
+      <div class="pricing__trust-item" *ngFor="let t of trustItems">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green-color)" stroke-width="2" [innerHTML]="t.icon"></svg>
+        <span>{{ t.text }}</span>
+      </div>
+    </div>
+
+  </div>
+</section>

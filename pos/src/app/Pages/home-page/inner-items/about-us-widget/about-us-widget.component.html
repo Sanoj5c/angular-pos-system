@@ -1,1 +1,129 @@
-<p>about-us-widget works!</p>
+<section class="about">
+  <div class="about__container">
+
+    <div class="about__label">Who We Are</div>
+
+    <div class="about__top">
+      <div class="about__headline">
+        <h2 class="about__title">Built by merchants,<br /><em>for merchants.</em></h2>
+      </div>
+      <p class="about__lead">
+        SwiftPOS started in 2018 from a small café in Austin, Texas. Frustrated by clunky,
+        overpriced POS systems, our founders built their own — and never looked back.
+        Today we power businesses across 40+ countries.
+      </p>
+    </div>
+
+    <div class="about__grid">
+
+      <!-- Image block -->
+      <div class="about__image-block">
+        <div class="about__image-wrap">
+          <div class="about__image-placeholder">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21,15 16,10 5,21"/>
+            </svg>
+          </div>
+          <div class="about__image-tag">
+            <span class="about__image-tag-year">Est. 2018</span>
+            <span class="about__image-tag-place">Austin, TX</span>
+          </div>
+        </div>
+        <div class="about__image-wrap about__image-wrap--sm">
+          <div class="about__image-placeholder about__image-placeholder--sm">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Values (static — no *ngFor to avoid innerHTML SVG issue) -->
+      <div class="about__values">
+
+        <div class="about__value">
+          <div class="about__value-icon about__value-icon--green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-color)" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="about__value-text">
+            <h4 class="about__value-title">Reliability You Can Count On</h4>
+            <p class="about__value-desc">99.9% uptime guaranteed. Your sales never stop, and neither do we.</p>
+          </div>
+        </div>
+
+        <div class="about__value">
+          <div class="about__value-icon about__value-icon--blue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-color)" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <div class="about__value-text">
+            <h4 class="about__value-title">Transparent Pricing</h4>
+            <p class="about__value-desc">No hidden fees, no surprise charges. What you see is exactly what you pay.</p>
+          </div>
+        </div>
+
+        <div class="about__value">
+          <div class="about__value-icon about__value-icon--green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-color)" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <div class="about__value-text">
+            <h4 class="about__value-title">Human Support, Always</h4>
+            <p class="about__value-desc">Real people, real answers — 24/7 support via chat, phone, or email.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div class="about__team-section">
+      <h3 class="about__team-title">The Faces Behind SwiftPOS</h3>
+      <div class="about__team-grid">
+
+        <div class="about__member">
+          <div class="about__member-avatar about__member-avatar--primary">JM</div>
+          <div class="about__member-info">
+            <span class="about__member-name">Jordan Miles</span>
+            <span class="about__member-role">CEO &amp; Co-Founder</span>
+          </div>
+        </div>
+
+        <div class="about__member">
+          <div class="about__member-avatar about__member-avatar--green">PN</div>
+          <div class="about__member-info">
+            <span class="about__member-name">Priya Nair</span>
+            <span class="about__member-role">CTO &amp; Co-Founder</span>
+          </div>
+        </div>
+
+        <div class="about__member">
+          <div class="about__member-avatar about__member-avatar--blue">CR</div>
+          <div class="about__member-info">
+            <span class="about__member-name">Carlos Ruiz</span>
+            <span class="about__member-role">Head of Design</span>
+          </div>
+        </div>
+
+        <div class="about__member">
+          <div class="about__member-avatar about__member-avatar--purple">AO</div>
+          <div class="about__member-info">
+            <span class="about__member-name">Aisha Okonkwo</span>
+            <span class="about__member-role">Head of Customer Success</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

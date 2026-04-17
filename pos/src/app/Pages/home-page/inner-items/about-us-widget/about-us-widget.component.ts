@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about-us-widget',
+  standalone: true,
   imports: [],
   templateUrl: './about-us-widget.component.html',
-  styleUrl: './about-us-widget.component.scss'
+  styleUrls: ['./about-us-widget.component.scss']
 })
-export class AboutUsWidgetComponent {
-
-}
+export class AboutUsWidgetComponent {}
